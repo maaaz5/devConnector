@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://medaminee:otolZnmDYfTngYnv@cluster0.bdsi8oz.mongodb.net/devconnector?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "Iv1.bf1bda14d3388de5",
+  "githubSecret": "f7e1f53dec742cfe3dfdc8c5b427852b7bbcc056 "
+}
