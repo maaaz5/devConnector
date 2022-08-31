@@ -3,8 +3,10 @@ import Navbar from "./components/layout/Navbar";
 import Landing from "./components/layout/Landing";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
+import Dashboard from "./components/dashboard/Dashboard";
 import Alert from "./components/layout/Alert";
 import "./App.css";
+import PrivateRoute from "./components/routing/PrivateRoute";
 import { Fragment, useEffect } from "react";
 import setAuthToken from "./utils/setAuthToken";
 //redux
@@ -33,6 +35,14 @@ function App() {
             <Routes>
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
+              <Route
+                path="/dashboard"
+                element={
+                  <PrivateRoute>
+                    <Dashboard />
+                  </PrivateRoute>
+                }
+              />
             </Routes>
           </section>
         </Fragment>
