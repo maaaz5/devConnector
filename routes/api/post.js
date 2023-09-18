@@ -39,7 +39,7 @@ router.post(
   }
 );
 
-// @route GET api/post
+// @route GET api/posts
 // @des   get all posts
 // @acess Private
 router.get("/", auth, async (req, res) => {

@@ -13,12 +13,15 @@ import setAuthToken from "./utils/setAuthToken";
 import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/auth";
+//components
 import CreateProfile from "./components/profile-forms/CreateProfile";
 import EditProfile from "./components/profile-forms/EditProfile";
 import AddExperience from "./components/profile-forms/AddExperience";
 import AddEducation from "./components/profile-forms/AddEducation";
 import Profiles from "./components/profiles/Profiles";
 import Profile from "./components/profile/Profile";
+import Posts from "./components/posts/Posts";
+import Post1 from "./components/post/Post1";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -80,6 +83,22 @@ function App() {
                 element={
                   <PrivateRoute>
                     <Dashboard />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/posts/:id"
+                element={
+                  <PrivateRoute>
+                    <Post1 />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/posts"
+                element={
+                  <PrivateRoute>
+                    <Posts />
                   </PrivateRoute>
                 }
               />
